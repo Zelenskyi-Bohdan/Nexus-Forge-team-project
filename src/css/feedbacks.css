@@ -50,7 +50,6 @@
   flex-direction: column;
   gap: 24px;
   width: 335px;
-  height: 328px;
 }
 
 .feedbacks-list-card {
@@ -85,7 +84,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 40px;
-  width: 335px;
+  width: auto;
   height: 48px;
 }
 
@@ -110,7 +109,7 @@
   transition:
     background-color var(--transition),
     box-shadow var(--transition),
-    opaopacity;
+    opaopacity var(--transition);
 }
 
 .feedbacks-btn:hover,
@@ -139,6 +138,17 @@
     width: 704px;
     height: 492px;
   }
+
+  .feedbacks-list {
+    flex-direction: row;
+    width: 704px;
+  }
+
+  .feedbacks-list-card {
+    flex: 1;
+    padding: 20px;
+    height: 412px;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -152,6 +162,14 @@
 
   .feedbacks-content-container {
     width: 1312px;
-    height: 354px;
+  }
+
+  .feedbacks-list {
+    width: 1312px;
+  }
+
+  .feedbacks-list-card {
+    padding: 32px;
+    height: 274px;
   }
 }

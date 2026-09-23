@@ -10,16 +10,24 @@
         have to say.
       </p>
     </div>
-    <div class="feedbacks-content-container">
-      <ul class="feedbacks-list"></ul>
+
+    <div class="feedbacks-content-container swiper">
+      <ul class="feedbacks-list swiper-wrapper">
+        <li class="feedbacks-list-card swiper-slide"></li>
+        <li class="feedbacks-list-card swiper-slide"></li>
+        <li class="feedbacks-list-card swiper-slide"></li>
+      </ul>
+
       <div class="feedbacks-list-bottom">
+        <div class="swiper-pagination"></div>
+
         <div class="feedbacks-btn-container">
-          <button class="feedbacks-btn" type="button">
+          <button class="feedbacks-btn swiper-button-prev" type="button">
             <svg class="feedbacks-btn-icon">
               <use href="../img/sprite.svg#icon-arrow-back"></use>
             </svg>
           </button>
-          <button class="feedbacks-btn" type="button">
+          <button class="feedbacks-btn swiper-button-next" type="button">
             <svg class="feedbacks-btn-icon">
               <use href="../img/sprite.svg#icon-arrow-forward"></use>
             </svg>
