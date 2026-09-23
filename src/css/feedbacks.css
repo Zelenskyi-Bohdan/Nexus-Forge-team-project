@@ -1,0 +1,136 @@
+.feedbacks-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.feedbacks-description-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  width: 335px;
+}
+
+.feedbacks-decoration {
+  width: 300px;
+  height: 21px;
+}
+
+.feedbacks-header {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: var(--color-scheme-1-text);
+}
+
+.feedbacks-description {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--color-scheme-1-text);
+}
+
+.feedbacks-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 335px;
+  height: 408px;
+}
+
+.feedbacks-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 24px;
+  width: 335px;
+  height: 328px;
+}
+
+.feedbacks-list-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  border: 2px solid var(--color-scheme-1-border);
+  border-radius: 16px;
+  padding: 32px;
+  width: 335px;
+  height: 328px;
+
+  background-color: var(--color-scheme-2-foreground);
+}
+
+.feedbacks-card-description {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-scheme-1-text);
+}
+
+.feedbacks-card-author {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-scheme-1-text);
+}
+
+.feedbacks-list-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 335px;
+  height: 48px;
+}
+
+.feedbacks-btn-container {
+  display: flex;
+  gap: 16px;
+}
+
+.feedbacks-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: 2px solid var(--color-scheme-1-border);
+  border-radius: 4px;
+  padding: 12px;
+  width: 48px;
+  height: 48px;
+
+  background-color: var(--color-scheme-2-foreground);
+}
+
+@media (min-width: 768px) {
+  .feedbacks-description-container {
+    width: 624px;
+  }
+
+  .feedbacks-content-container {
+    width: 704px;
+    height: 492px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .feedbacks-description-container {
+    width: 768px;
+  }
+
+  .feedbacks-header {
+    font-size: 48px;
+  }
+
+  .feedbacks-content-container {
+    width: 1312px;
+    height: 354px;
+  }
+}
