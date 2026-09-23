@@ -40,7 +40,6 @@
   flex-direction: column;
   gap: 32px;
   width: 335px;
-  height: 408px;
 }
 
 .feedbacks-list {
@@ -49,7 +48,6 @@
   justify-content: flex-start;
   flex-direction: column;
   gap: 24px;
-  width: 335px;
 }
 
 .feedbacks-list-card {
@@ -109,7 +107,7 @@
   transition:
     background-color var(--transition),
     box-shadow var(--transition),
-    opaopacity var(--transition);
+    opacity var(--transition);
 }
 
 .feedbacks-btn:hover,
@@ -136,17 +134,15 @@
 
   .feedbacks-content-container {
     width: 704px;
-    height: 492px;
   }
 
   .feedbacks-list {
     flex-direction: row;
-    width: 704px;
   }
 
   .feedbacks-list-card {
-    flex: 1;
     padding: 20px;
+    width: 218px;
     height: 412px;
   }
 }
@@ -164,12 +160,9 @@
     width: 1312px;
   }
 
-  .feedbacks-list {
-    width: 1312px;
-  }
-
   .feedbacks-list-card {
     padding: 32px;
+    width: 421px;
     height: 274px;
   }
 }
