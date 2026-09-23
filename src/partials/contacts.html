@@ -1,5 +1,62 @@
 <section class="section contacts">
   <div class="container">
-    <load src="partials/decoration.html"/>
+    <div class="contacts-details">
+      <div class="section-title">
+        <load src="partials/decoration.html" />
+        <h2 class="section-header">
+          Let's Tell Your Story
+        </h2>
+        <p class="section-description">
+          I can't wait to hear more about your wedding! Tell me about your plans, and I'll be in touch to discuss how we
+          can create magic together.
+        </p>
+      </div>
+      <ul class="contacts-content">
+        <li>
+          <a href="mailto:info@mariakovalenko.com" class="contacts-content-link">
+            <svg class="contacts-icon" width="24">
+              <use href="./img/sprite.svg#icon-mail"></use>
+            </svg>
+            <span>info@mariakovalenko.com</span>
+          </a>
+        </li>
+        <li>
+          <a href="tel:+405551234567" class="contacts-content-link">
+            <svg class="contacts-icon">
+              <use href="./img/sprite.svg#icon-call"></use>
+            </svg>
+            <span>+40 (555) 123-4567</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://maps.app.goo.gl/qc7NSSZ5nBp8gb8C9" class="contacts-content-link" target="_blank"
+             rel="noopener noreferrer">
+            <svg class="contacts-icon">
+              <use href="./img/sprite.svg#icon-location-on"></use>
+            </svg>
+            <span>Raschdorffstraße 2-26, 13409 Berlin, Germany</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <form class="contacts-form">
+      <label class="contacts-form-label">
+        <span class="required">Name</span>
+        <input type="text" name="name" placeholder="Maria" class="contacts-form-input" required>
+      </label>
+      <label class="contacts-form-label">
+        <span class="required">Phone</span>
+        <input type="tel" name="phone" placeholder="+1 (202) 111 2323" class="contacts-form-input" required>
+      </label>
+      <label class="contacts-form-label">
+        <span>Message</span>
+        <textarea name="message"
+                  class="contacts-form-input contacts-form-textarea"
+                  placeholder="Tell me a little about you and your special day. Don't forget to include your wedding date, venue, and what you're most excited about..."></textarea>
+      </label>
+      <button type="submit" class="contacts-form-submit">
+        Let's Talk
+      </button>
+    </form>
   </div>
 </section>
