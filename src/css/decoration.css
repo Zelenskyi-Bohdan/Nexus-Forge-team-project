@@ -1,0 +1,9 @@
+.decoration {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-decoration {
+  height: 20px;
+  width: 300px;
+}
