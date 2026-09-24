@@ -6,7 +6,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 
-export function initSwiper() {
+import { getFeedbacks } from './api.js';
+import { renderFeedbacks } from './render.js';
+
+function initSwiper() {
   new Swiper('.swiper', {
     modules: [Navigation, Pagination],
 
@@ -38,3 +41,6 @@ export function initSwiper() {
     },
   });
 }
+
+renderFeedbacks();
+initSwiper();
