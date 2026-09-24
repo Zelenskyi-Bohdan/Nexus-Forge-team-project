@@ -6,6 +6,38 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 
+import { getFeedbacks } from './api.js';
+
+const feedbacksList = document.querySelector('.feedbacks-list');
+
+export function createFeedbackMarkup(feedbacks) {
+  return feedbacks
+    .map(
+      ({ _id, name, descr }) => `
+        <li class="feedbacks-list-card swiper-slide" data-id="${_id}">
+          <p class="feedbacks-card-description">
+            ${descr}
+          </p>
+
+          <p class="feedbacks-card-author">
+            ${name}
+          </p>
+        </li>
+      `
+    )
+    .join('');
+}
+
+export async function renderFeedbacks() {
+  try {
+    const data = await getFeedbacks();
+
+    feedbacksList.innerHTML = createFeedbackMarkup(data.feedbacks);
+  } catch (error) {
+    console.error('Failed to fetch feedbacks:', error);
+  }
+}
+
 export function initSwiper() {
   new Swiper('.swiper', {
     modules: [Navigation, Pagination],

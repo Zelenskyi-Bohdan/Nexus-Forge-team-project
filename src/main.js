@@ -1,4 +1,5 @@
 import './js/portfolio.js';
-import { initSwiper } from './js/swiper.js';
+import { renderFeedbacks, initSwiper } from './js/swiper.js';
 
+renderFeedbacks();
 initSwiper();
