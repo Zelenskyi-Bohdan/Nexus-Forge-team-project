@@ -7,7 +7,7 @@
 
     padding: 64px 0;
     margin: 0 auto;
-    width: 375px;
+    /* width: 375px; */
 
     background: var(--color-scheme-2-background);
 }
@@ -119,10 +119,6 @@
 
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
-    .faq {
-        width: 768px;
-    }
-
     .faq-title {
         height: 38px;
     }
@@ -138,10 +134,6 @@
 
 /* Styles for Desktop devices */
 @media (min-width: 1440px) {
-    .faq {
-        width: 1440px;
-    }
-
     .section-title {
         margin: 0 auto 80px auto;
         width: 768px;
