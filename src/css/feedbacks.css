@@ -13,11 +13,6 @@
   width: 335px;
 }
 
-.feedbacks-decoration {
-  width: 300px;
-  height: 21px;
-}
-
 .feedbacks-header {
   font-family: var(--second-family);
   font-weight: 500;
