@@ -103,7 +103,7 @@
   padding: 12px;
   width: 48px;
   height: 48px;
-  background-color: var(--color-scheme-2-foreground);
+  background-color: var(--color-scheme-1-foreground);
 
   transition:
     background-color var(--transition),
