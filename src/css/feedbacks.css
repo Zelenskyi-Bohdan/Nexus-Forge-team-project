@@ -43,7 +43,7 @@
   display: flex;
 }
 
-.feedbacks-list-card {
+.feedbacks-list .feedbacks-list-card {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -63,6 +63,7 @@
 }
 
 .feedbacks-card-author {
+  margin-top: auto;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
@@ -146,7 +147,7 @@
     width: 704px;
   }
 
-  .feedbacks-list-card {
+  .feedbacks-list .feedbacks-list-card {
     padding: 20px;
     height: 412px;
   }
@@ -165,7 +166,7 @@
     width: 1312px;
   }
 
-  .feedbacks-list-card {
+  .feedbacks-list .feedbacks-list-card {
     padding: 32px;
     height: 274px;
   }
