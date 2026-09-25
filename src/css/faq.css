@@ -1,15 +1,11 @@
 .faq {
+    background: var(--color-scheme-2-background);
+}
+
+.faq-container {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
     flex-direction: column;
     gap: 80px;
-
-    padding: 64px 0;
-    margin: 0 auto;
-    /* width: 375px; */
-
-    background: var(--color-scheme-2-background);
 }
 
 .section-title {
@@ -18,7 +14,6 @@
     justify-content: flex-start;
     flex-direction: column;
     gap: 24px;
-    margin-bottom: 40px;
 }
 
 .faq-title {
@@ -28,7 +23,6 @@
     line-height: 1.2;
     letter-spacing: -0.01em;
     text-align: center;
-    height: 76px;
     color: var(--color-scheme-1-text);
 }
 
@@ -54,7 +48,6 @@
 }
 
 .answers-list-item {
-    box-sizing: border-box;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -73,10 +66,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: row;
     background-color: transparent;
     border: none;
-    outline: none;
     gap: 24px;
 
     padding: 20px 24px;
@@ -102,12 +93,6 @@
 }
 
 .answer-text {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: row;
-    gap: 16px;
-
     padding: 0 24px 24px;
 
     font-weight: 400;
@@ -119,10 +104,6 @@
 
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
-    .faq-title {
-        height: 38px;
-    }
-
     .answers-accordion {
         width: 704px;
     }
@@ -134,13 +115,13 @@
 
 /* Styles for Desktop devices */
 @media (min-width: 1440px) {
-    .section-title {
-        margin: 0 auto 80px auto;
-        width: 768px;
+    .faq-title {
+        font-size: 48px;
     }
 
-    .faq-title {
-        height: 58px;
+    .section-title {
+        margin: 0 auto;
+        width: 768px;
     }
 
     .answers-accordion {
