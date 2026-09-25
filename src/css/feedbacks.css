@@ -1,3 +1,7 @@
+:root {
+  --swiper-navigation-size: 48px;
+}
+
 .feedbacks-container {
   display: flex;
   align-items: center;
@@ -84,26 +88,24 @@
   gap: 16px;
 }
 
-.swiper-pagination {
-  position: static !important;
-  text-align: left !important;
+.feedbacks-list-bottom .swiper-pagination {
+  position: static;
+  text-align: left;
   margin: 0;
 }
 
-.feedbacks-btn {
-  position: static !important;
+.feedbacks-btn-container .feedbacks-btn {
+  position: static;
 
-  display: block;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  margin: 0;
 
   border: 2px solid var(--color-scheme-1-border);
   border-radius: 4px;
   padding: 12px;
-  width: 48px;
-  height: 48px;
   background-color: var(--color-scheme-1-foreground);
 
   transition:
