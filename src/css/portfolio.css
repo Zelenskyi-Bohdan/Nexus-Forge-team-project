@@ -70,7 +70,6 @@
 }
 
 .portfolio-item img {
-  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -109,8 +108,8 @@
   border-color: var(--color-curious-blue-light);
 }
 
-.portfolio-section .is-hidden {
-  display: none !important;
+.section-header .is-hidden {
+  display: none;
 }
 
 .portfolio-loader {
