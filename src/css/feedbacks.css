@@ -17,23 +17,6 @@
   width: 100%;
 }
 
-.feedbacks-header {
-  font-family: var(--second-family);
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  text-align: center;
-  color: var(--color-scheme-1-text);
-}
-
-.feedbacks-description {
-  font-size: 18px;
-  line-height: 1.5;
-  text-align: center;
-  color: var(--color-scheme-1-text);
-}
-
 .feedbacks-content-container {
   width: 100%;
 }
