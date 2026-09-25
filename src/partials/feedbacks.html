@@ -1,8 +1,10 @@
-<section class="section">
+<section class="section" aria-labelledby="feedbacks-title">
   <div class="feedbacks-container container">
     <div class="feedbacks-description-container">
       <load src="partials/decoration.html" />
-      <h2 class="feedbacks-header">Words from Our Wonderful Couples</h2>
+      <h2 class="feedbacks-header" id="feedbacks-title">
+        Words from Our Wonderful Couples
+      </h2>
       <p class="feedbacks-description">
         Read what the couples who entrusted us with their most precious memories
         have to say.
@@ -15,16 +17,37 @@
       </div>
 
       <div class="feedbacks-list-bottom">
-        <div class="swiper-pagination"></div>
+        <div
+          class="swiper-pagination"
+          aria-label="Testimonials pagination"
+        ></div>
 
         <div class="feedbacks-btn-container">
-          <button class="feedbacks-btn swiper-button-prev" type="button">
-            <svg class="feedbacks-btn-icon" width="24" height="24">
+          <button
+            class="feedbacks-btn swiper-button-prev"
+            type="button"
+            aria-label="Previous response"
+          >
+            <svg
+              class="feedbacks-btn-icon"
+              width="24"
+              height="24"
+              aria-hidden="true"
+            >
               <use href="./img/sprite.svg#icon-arrow-back"></use>
             </svg>
           </button>
-          <button class="feedbacks-btn swiper-button-next" type="button">
-            <svg class="feedbacks-btn-icon" width="24" height="24">
+          <button
+            class="feedbacks-btn swiper-button-next"
+            type="button"
+            aria-label="Next response"
+          >
+            <svg
+              class="feedbacks-btn-icon"
+              width="24"
+              height="24"
+              aria-hidden="true"
+            >
               <use href="./img/sprite.svg#icon-arrow-forward"></use>
             </svg>
           </button>
