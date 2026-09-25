@@ -18,63 +18,16 @@
 .book-btn {
   display: none;
 }
-
-/* Styles for Mobile Menu */
+.header-nav-wrapper {
+  display: flex;
+  margin-left: auto;
+  gap: 32px;
+}
 
 .menu-button {
   display: block;
   background: none;
   border: none;
-}
-.mobile-menu {
-  padding: 0 20px;
-  background: var(--color-scheme-2-background);
-  position: fixed;
-  inset: 0;
-  visibility: hidden;
-  opacity: 0;
-  transform: translateX(100%);
-  transition:
-    opacity var(--transition),
-    transform var(--transition),
-    visibility var(--transition);
-}
-.mobile-menu.is-open {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(0);
-}
-.close-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: none;
-  border: none;
-}
-.mob-nav-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.5;
-  margin-top: 16px;
-}
-.mob-nav-item {
-  width: 100%;
-  padding: 12px 0;
-}
-.mob-book-btn {
-  background-color: var(--color-curious-blue);
-  margin: 32px auto 0;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 6px;
-  font-weight: 500;
-  line-height: 1.5;
 }
 /* Styles for Tablet devices */
 @media (min-width: 768px) {
@@ -94,8 +47,8 @@
   }
 
   .header-nav {
-    display: block;
-    margin-left: 116px;
+    display: flex;
+    align-items: center;
   }
   .header-nav-list {
     display: flex;
@@ -117,17 +70,14 @@
   .book-btn:disabled {
     opacity: 0.4;
   }
-  .header-nav-item {
+  .header-nav-link {
     transition: color var(--transition);
   }
-  .header-nav-item:hover,
-  .header-nav-item:focus {
+  .header-nav-link:hover,
+  .header-nav-link:focus {
     color: var(--color-curious-blue);
   }
 }
 /* Styles for Desktop devices */
 @media (min-width: 1440px) {
-  .header-nav {
-    margin-left: 720px;
-  }
 }
