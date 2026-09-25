@@ -1,0 +1,26 @@
+.section-header {
+  color: var(--color-scheme-1-text);
+  font-family: var(--second-family), serif;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-align: center;
+  font-size: 32px;
+}
+
+.section-description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+}
+
+.decoration {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-decoration {
+  height: 20px;
+  width: 300px;
+}

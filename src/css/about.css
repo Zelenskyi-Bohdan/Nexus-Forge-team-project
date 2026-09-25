@@ -1,0 +1,31 @@
+.section-header.about {
+  font-size: 28px;
+  color: var(--color-scheme-1-text);
+}
+
+.container-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-description {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-img {
+  min-width: 335px;
+}
+
+
+@media (min-width: 1440px) {
+  .about-description {
+    width: 779px;
+  }
+  .section-header.about {
+    font-size: 40px;
+  }
+}

@@ -1,3 +1,7 @@
+:root {
+  --swiper-navigation-size: 48px;
+}
+
 .feedbacks-container {
   display: flex;
   align-items: center;
@@ -10,12 +14,7 @@
   align-items: center;
   flex-direction: column;
   gap: 24px;
-  width: 335px;
-}
-
-.feedbacks-decoration {
-  width: 300px;
-  height: 21px;
+  width: 100%;
 }
 
 .feedbacks-header {
@@ -36,21 +35,19 @@
 }
 
 .feedbacks-content-container {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  width: 335px;
+  width: 100%;
+}
+
+.feedbacks-swiper {
+  width: 100%;
+  overflow: hidden;
 }
 
 .feedbacks-list {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: 24px;
 }
 
-.feedbacks-list-card {
+.feedbacks-list .feedbacks-list-card {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -58,8 +55,7 @@
   border: 2px solid var(--color-scheme-1-border);
   border-radius: 16px;
   padding: 32px;
-  width: 335px;
-  height: 328px;
+  min-height: 328px;
 
   background-color: var(--color-scheme-2-foreground);
 }
@@ -71,6 +67,7 @@
 }
 
 .feedbacks-card-author {
+  margin-top: auto;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
@@ -81,9 +78,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
-  width: auto;
+  width: 100%;
   height: 48px;
+  margin-top: 32px;
 }
 
 .feedbacks-btn-container {
@@ -91,23 +88,39 @@
   gap: 16px;
 }
 
-.feedbacks-btn {
+.feedbacks-list-bottom .swiper-pagination {
+  position: static;
+  text-align: left;
+  margin: 0;
+}
+
+.feedbacks-btn-container .feedbacks-btn {
+  position: static;
+
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  margin: 0;
 
   border: 2px solid var(--color-scheme-1-border);
   border-radius: 4px;
   padding: 12px;
-  width: 48px;
-  height: 48px;
-  background-color: var(--color-scheme-2-foreground);
+  background-color: var(--color-scheme-1-foreground);
 
   transition:
     background-color var(--transition),
     box-shadow var(--transition),
     opacity var(--transition);
+}
+
+.feedbacks-btn::after {
+  display: none;
+}
+
+.feedbacks-btn-icon {
+  fill: currentColor;
+  color: var(--color-scheme-1-text);
 }
 
 .feedbacks-btn:hover,
@@ -136,13 +149,8 @@
     width: 704px;
   }
 
-  .feedbacks-list {
-    flex-direction: row;
-  }
-
-  .feedbacks-list-card {
+  .feedbacks-list .feedbacks-list-card {
     padding: 20px;
-    width: 218px;
     height: 412px;
   }
 }
@@ -160,9 +168,8 @@
     width: 1312px;
   }
 
-  .feedbacks-list-card {
+  .feedbacks-list .feedbacks-list-card {
     padding: 32px;
-    width: 421px;
     height: 274px;
   }
 }
