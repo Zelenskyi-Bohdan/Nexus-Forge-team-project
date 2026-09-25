@@ -60,5 +60,5 @@ html {
 body {
   font-family: var(--font-family, var(--second-family)), sans-serif;
   color: var(--color-neutral-darkest);
-  background-color: var(--color-white);
+  background-color: var(--color-scheme-2-background);
 }
