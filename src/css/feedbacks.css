@@ -14,7 +14,7 @@
   align-items: center;
   flex-direction: column;
   gap: 24px;
-  width: 335px;
+  width: 100%;
 }
 
 .feedbacks-header {
@@ -35,7 +35,7 @@
 }
 
 .feedbacks-content-container {
-  width: 335px;
+  width: 100%;
 }
 
 .feedbacks-swiper {
@@ -55,7 +55,7 @@
   border: 2px solid var(--color-scheme-1-border);
   border-radius: 16px;
   padding: 32px;
-  height: 328px;
+  min-height: 328px;
 
   background-color: var(--color-scheme-2-foreground);
 }
