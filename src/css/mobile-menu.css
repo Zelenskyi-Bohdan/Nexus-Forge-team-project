@@ -1,4 +1,7 @@
 /* Styles for Mobile Menu */
+.no-scroll {
+  overflow: hidden;
+}
 
 .mobile-menu {
   padding: 0 20px;
@@ -10,9 +13,9 @@
   opacity: 0;
   transform: translateX(100%);
   transition:
-    opacity var(--transition),
-    transform var(--transition),
-    visibility var(--transition);
+    opacity var(--transition-menu),
+    transform var(--transition-menu),
+    visibility var(--transition-menu);
 }
 .mobile-menu.is-open {
   visibility: visible;
