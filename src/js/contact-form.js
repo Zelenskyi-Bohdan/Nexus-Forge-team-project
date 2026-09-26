@@ -32,8 +32,8 @@ const showError = message => {
 };
 
 const handleError = error => {
+  const status = error?.response?.status;
   const message = error?.response?.data?.message;
-  const status = Number.parseInt(error?.response?.status);
 
   if (status >= 400 && status < 500) {
     showError(message || 'Please check your input and try again');
@@ -42,6 +42,25 @@ const handleError = error => {
 
   showError('Something went wrong. Please try again later');
 };
+
+const toggleControls = (elements, disabled) => {
+  elements.forEach(el => {
+    el.disabled = disabled;
+
+    if (el.type === 'submit') {
+      el.querySelector('.button-text')?.classList.toggle('hidden', disabled);
+      el.querySelector('.loader')?.classList.toggle('hidden', !disabled);
+    }
+  });
+};
+
+const disableControls = (elements) => {
+  toggleControls(elements, true);
+};
+
+const enableControls = (elements) => {
+  toggleControls(elements, false);
+}
 
 const init = () => {
   const contactsForm = document.querySelector('.contacts-form');
@@ -63,6 +82,7 @@ const init = () => {
 
     const nameElement = contactsForm.elements['name'];
     const messageElement = contactsForm.elements['message'];
+    const buttonElement = contactsForm.querySelector('.contacts-form-submit');
 
     const isNameValid = validateName(nameElement);
     const isPhoneValid = validatePhoneNumber(phoneElement);
@@ -72,24 +92,27 @@ const init = () => {
       return;
     }
 
-    const phoneValue = phoneElement.value.replace(/\D/g, '');
+    const controls = [nameElement, phoneElement, messageElement, buttonElement];
+    disableControls(controls);
 
     const payload = {
       name: nameElement.value,
-      phone: phoneValue,
+      phone: phoneElement.value.replace(/\D/g, ''),
     };
 
-    const message = contactsForm.elements['message'].value.trim();
+    const message = messageElement.value.trim();
     if (message) {
       payload.message = message;
     }
 
     try {
-      const { _id: id, orderNum } = await createOrder(payload);
+      const { orderNum } = await createOrder(payload);
       contactsForm.reset();
       openModal(orderNum);
     } catch (error) {
       handleError(error);
+    } finally {
+      enableControls(controls);
     }
   });
 };
