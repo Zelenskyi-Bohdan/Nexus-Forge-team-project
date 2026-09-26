@@ -51,6 +51,7 @@
   /* Transition */
 
   --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-menu: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html {
@@ -61,4 +62,46 @@ body {
   font-family: var(--font-family, var(--second-family)), sans-serif;
   color: var(--color-neutral-darkest);
   background-color: var(--color-scheme-2-background);
+}
+
+/* -----------------------------------------------------------------------------------------
+    Title and description
+----------------------------------------------------------------------------------------- */
+
+.section-header {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: var(--color-scheme-1-text);
+}
+
+.section-description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--color-scheme-1-text);
+}
+
+@media (min-width: 1440px) {
+  .section-header {
+    font-size: 48px;
+  }
+}
+
+/* -----------------------------------------------------------------------------------------
+    Decoration styles
+----------------------------------------------------------------------------------------- */
+
+.decoration {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-decoration {
+  height: 20px;
+  width: 300px;
 }

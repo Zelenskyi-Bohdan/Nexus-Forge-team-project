@@ -1,4 +1,4 @@
-<section class="section contacts">
+<section class="section contacts" id="contacts">
   <div class="container">
     <div class="contacts-details">
       <div class="section-title">
@@ -14,10 +14,10 @@
       <ul class="contacts-content">
         <li>
           <a href="mailto:info@mariakovalenko.com" class="contacts-content-link">
-            <svg class="contacts-icon" width="24">
+            <svg class="contacts-icon">
               <use href="./img/sprite.svg#icon-mail"></use>
             </svg>
-            <span>info@mariakovalenko.com</span>
+            <span class="contacts-text">info@mariakovalenko.com</span>
           </a>
         </li>
         <li>
@@ -25,16 +25,16 @@
             <svg class="contacts-icon">
               <use href="./img/sprite.svg#icon-call"></use>
             </svg>
-            <span>+40 (555) 123-4567</span>
+            <span class="contacts-text">+40 (555) 123-4567</span>
           </a>
         </li>
         <li>
           <a href="https://maps.app.goo.gl/qc7NSSZ5nBp8gb8C9" class="contacts-content-link" target="_blank"
-             rel="noopener noreferrer">
+          rel="noopener noreferrer">
             <svg class="contacts-icon">
               <use href="./img/sprite.svg#icon-location-on"></use>
             </svg>
-            <span>Raschdorffstraße 2-26, 13409 Berlin, Germany</span>
+            <p class="contacts-text">Raschdorffstraße 2-26, 13409 Berlin, Germany</p>
           </a>
         </li>
       </ul>
@@ -42,11 +42,14 @@
     <form class="contacts-form">
       <label class="contacts-form-label">
         <span class="required">Name</span>
-        <input type="text" name="name" placeholder="Maria" class="contacts-form-input" required>
+        <input type="text" name="name" placeholder="Maria" class="contacts-form-input">
       </label>
       <label class="contacts-form-label">
         <span class="required">Phone</span>
-        <input type="tel" name="phone" placeholder="+1 (202) 111 2323" class="contacts-form-input" required>
+        <input type="tel"
+               name="phone"
+               placeholder="+10 (202) 111 2323"
+               class="contacts-form-input">
       </label>
       <label class="contacts-form-label">
         <span>Message</span>
@@ -55,8 +58,10 @@
                   placeholder="Tell me a little about you and your special day. Don't forget to include your wedding date, venue, and what you're most excited about..."></textarea>
       </label>
       <button type="submit" class="contacts-form-submit">
-        Let's Talk
+        <span class="button-text">Let's Talk</span>
+        <span class="loader hidden"></span>
       </button>
     </form>
   </div>
+  <load src="partials/success-modal.html" />
 </section>

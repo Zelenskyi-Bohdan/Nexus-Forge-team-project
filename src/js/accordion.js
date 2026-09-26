@@ -1,5 +1,6 @@
 import Accordion from "accordion-js";
 import "accordion-js/dist/accordion.min.css";
+import spriteUrl from '../img/sprite.svg';
 
 new Accordion('.answers-accordion', {
     elementClass: 'answers-list-item',
@@ -7,13 +8,7 @@ new Accordion('.answers-accordion', {
     panelClass: 'answer-panel',
     activeClass: 'is-open',
     duration: 400,
-    showMultiple: true,
+    showMultiple: false,
     openOnInit: [],
     ariaEnabled: true,
-    onOpen: (el) => {
-        el.querySelector('use')?.setAttribute('href', '../img/sprite.svg#icon-close');
-    },
-    onClose: (el) => {
-        el.querySelector('use')?.setAttribute('href', '../img/sprite.svg#icon-add');
-    }
 });
