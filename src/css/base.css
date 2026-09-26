@@ -52,6 +52,13 @@
 
   --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-menu: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Swiper */
+
+  --swiper-pagination-color: var(--color-scheme-1-text);
+  --swiper-pagination-bullet-inactive-color: var(--color-scheme-1-text);
+  --swiper-pagination-bullet-size: 8px;
+  --swiper-pagination-bullet-horizontal-gap: 8px;
 }
 
 html {
