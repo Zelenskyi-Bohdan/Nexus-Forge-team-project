@@ -21,7 +21,7 @@
     <script type="module" crossorigin src="/Nexus-Forge-team-project/index.js"></script>
     <link rel="modulepreload" crossorigin href="/Nexus-Forge-team-project/assets/vendor-xIPoRiw5.js">
     <link rel="stylesheet" crossorigin href="/Nexus-Forge-team-project/assets/vendor-BQl7bc_B.css">
-    <link rel="stylesheet" crossorigin href="/Nexus-Forge-team-project/assets/index-BpH-FHT0.css">
+    <link rel="stylesheet" crossorigin href="/Nexus-Forge-team-project/assets/index-CrsOtorP.css">
   </head>
   <body>
     <header class="header">
@@ -159,7 +159,11 @@
   </div>
 </section>
 
-      <section class="section-header" id="portfolio">
+      <section
+  class="section-header"
+  id="portfolio"
+  aria-labelledby="portfolio-heading"
+>
   <div class="container portfolio-container">
     <div class="portfolio-title-block">
       <div class="decoration">
@@ -167,21 +171,34 @@
     <use href="/Nexus-Forge-team-project/assets/sprite-D6EPRs0m.svg#icon-decoration"></use>
   </svg>
 </div>
-      <h2 class="portfolio-title">Portfolio Highlights</h2>
+      <h2 class="portfolio-title" id="portfolio-heading">
+        Portfolio Highlights
+      </h2>
     </div>
+
     <ul class="portfolio-filters list">
       <li class="filter-item">
-        <button class="filter-btn active" type="button" data-category="all">
+        <button
+          class="filter-btn active"
+          type="button"
+          data-category="all"
+          aria-pressed="true"
+        >
           All Photos
         </button>
       </li>
     </ul>
 
-    <div class="portfolio-loader is-hidden" id="portfolio-loader">
-      <span class="spinner"></span>
+    <div
+      class="portfolio-loader is-hidden"
+      id="portfolio-loader"
+      aria-live="polite"
+    >
+      <span class="spinner" aria-hidden="true"></span>
+      <span class="visually-hidden">Loading images...</span>
     </div>
 
-    <ul class="portfolio-list list"></ul>
+    <ul class="portfolio-list list" aria-live="polite"></ul>
 
     <div class="portfolio-pagination">
       <button class="show-more-btn is-hidden" type="button" id="show-more-btn">
