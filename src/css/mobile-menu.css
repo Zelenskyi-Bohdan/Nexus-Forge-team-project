@@ -1,0 +1,56 @@
+/* Styles for Mobile Menu */
+.no-scroll {
+  overflow: hidden;
+}
+
+.mobile-menu {
+  padding: 0 20px;
+  background: var(--color-scheme-2-background);
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(100%);
+  transition:
+    opacity var(--transition-menu),
+    transform var(--transition-menu),
+    visibility var(--transition-menu);
+}
+.mobile-menu.is-open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+}
+.mob-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: 16px;
+}
+.mob-nav-item {
+  width: 100%;
+  padding: 12px 0;
+}
+.mob-book-btn {
+  background-color: var(--color-curious-blue);
+  margin: 32px auto 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+  font-weight: 500;
+  line-height: 1.5;
+}

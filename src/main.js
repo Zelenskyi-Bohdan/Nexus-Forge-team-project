@@ -1,4 +1,6 @@
+import './js/mobile-menu.js';
 import './js/portfolio.js';
-import { initSwiper } from './js/swiper.js';
+import './js/swiper.js';
+import './js/contact-form.js';
 
-initSwiper();
+import './js/accordion.js';

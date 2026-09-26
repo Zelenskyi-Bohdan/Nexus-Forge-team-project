@@ -1,3 +1,7 @@
+:root {
+  --swiper-navigation-size: 48px;
+}
+
 .feedbacks-container {
   display: flex;
   align-items: center;
@@ -10,28 +14,11 @@
   align-items: center;
   flex-direction: column;
   gap: 24px;
-  width: 335px;
-}
-
-.feedbacks-header {
-  font-family: var(--second-family);
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  text-align: center;
-  color: var(--color-scheme-1-text);
-}
-
-.feedbacks-description {
-  font-size: 18px;
-  line-height: 1.5;
-  text-align: center;
-  color: var(--color-scheme-1-text);
+  width: 100%;
 }
 
 .feedbacks-content-container {
-  width: 335px;
+  width: 100%;
 }
 
 .feedbacks-swiper {
@@ -43,7 +30,7 @@
   display: flex;
 }
 
-.feedbacks-list-card {
+.feedbacks-list .feedbacks-list-card {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -51,7 +38,7 @@
   border: 2px solid var(--color-scheme-1-border);
   border-radius: 16px;
   padding: 32px;
-  height: 328px;
+  min-height: 328px;
 
   background-color: var(--color-scheme-2-foreground);
 }
@@ -63,6 +50,7 @@
 }
 
 .feedbacks-card-author {
+  margin-top: auto;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
@@ -83,26 +71,24 @@
   gap: 16px;
 }
 
-.swiper-pagination {
-  position: static !important;
-  text-align: left !important;
+.feedbacks-list-bottom .swiper-pagination {
+  position: static;
+  text-align: left;
   margin: 0;
 }
 
-.feedbacks-btn {
-  position: static !important;
+.feedbacks-btn-container .feedbacks-btn {
+  position: static;
 
-  display: block;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  margin: 0;
 
   border: 2px solid var(--color-scheme-1-border);
   border-radius: 4px;
   padding: 12px;
-  width: 48px;
-  height: 48px;
   background-color: var(--color-scheme-1-foreground);
 
   transition:
@@ -146,7 +132,7 @@
     width: 704px;
   }
 
-  .feedbacks-list-card {
+  .feedbacks-list .feedbacks-list-card {
     padding: 20px;
     height: 412px;
   }
@@ -165,7 +151,7 @@
     width: 1312px;
   }
 
-  .feedbacks-list-card {
+  .feedbacks-list .feedbacks-list-card {
     padding: 32px;
     height: 274px;
   }

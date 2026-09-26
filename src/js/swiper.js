@@ -4,11 +4,14 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, A11y } from 'swiper/modules';
 
-export function initSwiper() {
+import { getFeedbacks } from './api.js';
+import { renderFeedbacks } from './render.js';
+
+function initSwiper() {
   new Swiper('.swiper', {
-    modules: [Navigation, Pagination],
+    modules: [Navigation, Pagination, A11y],
 
     slidesPerView: 1,
     spaceBetween: 16,
@@ -38,3 +41,6 @@ export function initSwiper() {
     },
   });
 }
+
+renderFeedbacks();
+initSwiper();

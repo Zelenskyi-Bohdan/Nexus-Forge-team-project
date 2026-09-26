@@ -1,0 +1,59 @@
+<div class="modal is-hidden" data-modal>
+  <div class="modal-backdrop" data-modal-close></div>
+
+  <div
+    class="modal-content"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-title"
+  >
+    <button
+      class="modal-close"
+      type="button"
+      aria-label="Close modal"
+      data-modal-close
+    >
+      <svg class="modal-close-icon" aria-hidden="true">
+        <use href="./img/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+
+    <div class="modal-description">
+      <h2 class="section-header">Thank You for Your Inquiry!</h2>
+
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcset="
+      ./img/success-modal/img_d@1x.webp 1x,
+      ./img/success-modal/img_d@2x.webp 2x
+    "
+        />
+
+        <source
+          media="(min-width: 768px)"
+          srcset="
+      ./img/success-modal/img_t@1x.webp 1x,
+      ./img/success-modal/img_t@2x.webp 2x
+    "
+        />
+
+        <img
+          class="modal-image"
+          src="./img/success-modal/img_m@1x.webp"
+          srcset="
+      ./img/success-modal/img_m@2x.webp 2x
+    "
+          alt="An elegant and styled flat lay composition for a wedding photographer's website. On a light, textured surface like soft linen, there is a beautiful calligraphy fountain pen resting beside a piece of high-quality stationery with handwritten notes."
+        />
+      </picture>
+
+      <p class="section-description">
+        I have received your message and I'm so excited about your interest! I will get in touch with you within
+        24-48 hours to discuss the details of your wedding day. In the meantime, feel free to browse my portfolio
+        or follow me on Instagram for more inspiration.
+      </p>
+      <p class="modal-order-number section-description"></p>
+    </div>
+  </div>
+</div>
