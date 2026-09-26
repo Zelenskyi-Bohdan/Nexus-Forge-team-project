@@ -8,14 +8,6 @@
   gap: 24px;
 }
 
-.section-description {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.5;
-  text-align: center;
-  color: var(--color-scheme-1-text);
-}
-
 .contacts-content {
   margin-top: 32px;
   display: flex;
