@@ -1,7 +1,6 @@
-/* Styles for Mobile devices */
-
 .header {
-  position: fixed;
+  position: sticky;
+  top: 0;
   background-color: var(--color-curious-blue-lightest);
   width: 100%;
   z-index: 999;
@@ -29,7 +28,9 @@
   background: none;
   border: none;
 }
+
 /* Styles for Tablet devices */
+
 @media (min-width: 768px) {
   .menu-button {
     display: none;
@@ -78,6 +79,5 @@
     color: var(--color-curious-blue);
   }
 }
+
 /* Styles for Desktop devices */
-@media (min-width: 1440px) {
-}
