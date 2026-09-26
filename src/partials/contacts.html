@@ -14,10 +14,10 @@
       <ul class="contacts-content">
         <li>
           <a href="mailto:info@mariakovalenko.com" class="contacts-content-link">
-            <svg class="contacts-icon" width="24">
+            <svg class="contacts-icon">
               <use href="./img/sprite.svg#icon-mail"></use>
             </svg>
-            <span>info@mariakovalenko.com</span>
+            <span class="contacts-text">info@mariakovalenko.com</span>
           </a>
         </li>
         <li>
@@ -25,7 +25,7 @@
             <svg class="contacts-icon">
               <use href="./img/sprite.svg#icon-call"></use>
             </svg>
-            <span>+40 (555) 123-4567</span>
+            <span class="contacts-text">+40 (555) 123-4567</span>
           </a>
         </li>
         <li>
@@ -34,7 +34,7 @@
             <svg class="contacts-icon">
               <use href="./img/sprite.svg#icon-location-on"></use>
             </svg>
-            <span>Raschdorffstraße 2-26, 13409 Berlin, Germany</span>
+            <p class="contacts-text">Raschdorffstraße 2-26, 13409 Berlin, Germany</p>
           </a>
         </li>
       </ul>
@@ -42,11 +42,16 @@
     <form class="contacts-form">
       <label class="contacts-form-label">
         <span class="required">Name</span>
-        <input type="text" name="name" placeholder="Maria" class="contacts-form-input" required>
+        <input type="text" name="name" placeholder="Maria" class="contacts-form-input">
+        <span class="error-message">Error text</span>
       </label>
       <label class="contacts-form-label">
         <span class="required">Phone</span>
-        <input type="tel" name="phone" placeholder="+1 (202) 111 2323" class="contacts-form-input" required>
+        <input type="tel"
+               name="phone"
+               placeholder="+10 (202) 111 2323"
+               class="contacts-form-input">
+        <span class="error-message">Error text</span>
       </label>
       <label class="contacts-form-label">
         <span>Message</span>
