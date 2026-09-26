@@ -1,12 +1,130 @@
 .hero-section {
+  padding-block: 32px;
 }
-.container {
-}
+
 .hero-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  padding: 32px 20px;
+  width: 335px;
+  height: 518px;
+  background-color: black;
 }
-.hero-section-title {
+
+.hero-content-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 32px;
+  width: 295px;
+  height: 454px;
 }
-.hero-section-text {
+
+.hero-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
-.book-btn {
+
+.hero-title {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--color-white);
+}
+
+.hero-text {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-white);
+}
+
+.hero-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: 1px solid var(--color-white);
+  border-radius: 6px;
+  width: 295px;
+  height: 44px;
+
+  font-weight: 500;
+  color: var(--color-neutral-darkest);
+
+  background-color: var(--color-white);
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    padding-block: 32px;
+  }
+
+  .hero-container {
+    padding: 32px;
+    width: 704px;
+    height: 431px;
+  }
+
+  .hero-content-container {
+    margin-top: auto;
+    width: 640px;
+    height: 277px;
+  }
+
+  .hero-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .hero-title {
+    width: 519px;
+  }
+
+  .hero-btn {
+    width: 159px;
+    color: var(--color-scheme-1-text);
+    background-color: var(--color-curious-blue);
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero-section {
+    padding-block: 48px;
+  }
+
+  .hero-container {
+    padding: 32px 64px;
+    width: 1312px;
+    height: 702px;
+  }
+
+  .hero-content-container {
+    flex-direction: row;
+    gap: 32px;
+    width: 1184px;
+    height: 212px;
+  }
+
+  .hero-text-container {
+    justify-content: flex-end;
+  }
+
+  .hero-title {
+    width: 700px;
+    font-size: 56px;
+  }
+
+  .hero-text {
+    width: 798px;
+  }
+
+  .hero-btn {
+    margin-top: auto;
+  }
 }
