@@ -17,8 +17,8 @@
 }
 
 .footer-logo-icon {
-  width: 128px;
-  height: 100px;
+  width: 206px;
+  height: auto;
   display: block;
 }
 
@@ -41,14 +41,16 @@
 }
 
 .footer-nav-wrapper {
-  gap: 40px;
+  gap: 32px;
   width: 100%;
 }
 
 .footer-title {
-  font-size: 16px;
   font-weight: 600;
-  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-scheme-2-text);
+  margin-bottom: 16px; 
 }
 
 .footer-menu-list,
@@ -62,11 +64,11 @@
 }
 
 .footer-menu-list {
-  gap: 32px;
+  gap: 24px;
 }
 
 .footer-social-list {
-  gap: 19px;
+  gap: 16px;
 }
 
 .footer-menu-link,
@@ -125,6 +127,10 @@
     gap: 128px;
     max-width: 1312px;
     border-radius: 32px;
+  }
+
+  .footer-menu-list {
+    gap: 32px;
   }
 
   .footer-nav-wrapper {
