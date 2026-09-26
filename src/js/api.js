@@ -38,9 +38,6 @@ export async function fetchPhotos(categoryId, page = 1, limit = 9) {
 }
 
 export async function createOrder(payload) {
-  const response = await axios.post(
-    '/orders',
-    payload
-  );
+  const response = await axios.post('/orders', payload);
   return response.data;
 }

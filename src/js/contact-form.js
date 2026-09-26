@@ -1,6 +1,47 @@
 import IMask from 'imask';
 import { createOrder } from './api.js';
 import { validateMessage, validateName, validatePhoneNumber } from './contact-form-validation.js';
+import { openModal } from './success-modal.js';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+import spriteUrl from '../img/sprite.svg';
+
+const showError = message => {
+  iziToast.show({
+    titleColor: '#FFFFFF',
+    message,
+    messageColor: '#FFFFFF',
+    position: 'topRight',
+    transitionIn: 'fadeIn',
+    animateInside: false,
+    backgroundColor: '#ef4040',
+    color: '#fff',
+    icon: 'toast-icon',
+    class: 'snackbar-toast',
+    progressBarColor: '#b51b1b',
+    maxWidth: '432px',
+    onOpening(instance, toast) {
+      const icon = toast.querySelector('.iziToast-icon');
+      icon.innerHTML = `
+        <svg width="24" height="24" aria-hidden="true">
+          <use href="${spriteUrl}#x-octagon"></use>
+        </svg>
+      `;
+    },
+  });
+};
+
+const handleError = error => {
+  const message = error?.response?.data?.message;
+  const status = Number.parseInt(error?.response?.status);
+
+  if (status >= 400 && status < 500) {
+    showError(message || 'Please check your input and try again');
+    return;
+  }
+
+  showError('Something went wrong. Please try again later');
+};
 
 const init = () => {
   const contactsForm = document.querySelector('.contacts-form');
@@ -36,7 +77,7 @@ const init = () => {
     const payload = {
       name: nameElement.value,
       phone: phoneValue,
-    }
+    };
 
     const message = contactsForm.elements['message'].value.trim();
     if (message) {
@@ -45,13 +86,11 @@ const init = () => {
 
     try {
       const { _id: id, orderNum } = await createOrder(payload);
-      console.log(`Order ID: ${id} created, orderNum: ${orderNum}`);
+      contactsForm.reset();
+      openModal(orderNum);
     } catch (error) {
-      console.log(error);
+      handleError(error);
     }
-
-    console.log(payload);
-    console.log('submit');
   });
 };
 
