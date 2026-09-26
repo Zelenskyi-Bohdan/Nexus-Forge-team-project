@@ -2,7 +2,7 @@ const modal = document.querySelector('[data-modal]');
 
 const closeButtons = modal.querySelectorAll('[data-modal-close]');
 
-const handleEscape = event => {
+const handleEscape = (event) => {
   if (event.key === 'Escape') {
     closeModal();
   }
