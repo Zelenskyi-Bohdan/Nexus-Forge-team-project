@@ -16,7 +16,7 @@
 }
 
 .contacts-content-link {
-  display: flex;
+  display: inline-flex;
   gap: 10px;
   text-decoration: underline;
   line-height: 1.5;

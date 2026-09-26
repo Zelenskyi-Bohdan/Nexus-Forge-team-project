@@ -1,35 +1,6 @@
 import IMask from 'imask';
-import { createOrder } from './api-functions.js';
-
-const validateName = (input) => {
-  const label = input.parentElement;
-  const errorMessage = label.querySelector('.error-message');
-  const value = input.value.trim();
-
-  if (!value) {
-    label.classList.add('error');
-    errorMessage.textContent = 'Please enter a valid name';
-    return false;
-  }
-
-  label.classList.remove('error');
-  errorMessage.textContent = '';
-  return true;
-};
-
-const validatePhoneNumber = (input) => {
-  const label = input.parentElement;
-  const errorMessage = label.querySelector('.error-message');
-  const value = input.value.replace(/\D/g, '');
-  if (!value || value.length !== 12) {
-    label.classList.add('error');
-    errorMessage.textContent = 'Please enter a valid phone number. Ex: +10 (202) 111 2323';
-    return false;
-  }
-  label.classList.remove('error');
-  errorMessage.textContent = '';
-  return true;
-}
+import { createOrder } from './api.js';
+import { validateMessage, validateName, validatePhoneNumber } from './contact-form-validation.js';
 
 const init = () => {
   const contactsForm = document.querySelector('.contacts-form');
@@ -50,11 +21,13 @@ const init = () => {
     e.preventDefault();
 
     const nameElement = contactsForm.elements['name'];
+    const messageElement = contactsForm.elements['message'];
 
     const isNameValid = validateName(nameElement);
     const isPhoneValid = validatePhoneNumber(phoneElement);
+    const isMessageValid = validateMessage(messageElement);
 
-    if (!isNameValid || !isPhoneValid) {
+    if (!isNameValid || !isPhoneValid || !isMessageValid) {
       return;
     }
 
@@ -81,6 +54,5 @@ const init = () => {
     console.log('submit');
   });
 };
-
 
 init();
