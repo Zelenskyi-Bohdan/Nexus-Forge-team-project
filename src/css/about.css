@@ -17,7 +17,7 @@
 }
 
 .about-img {
-  min-width: 335px;
+  object-fit: contain;
 }
 
 
