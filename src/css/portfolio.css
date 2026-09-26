@@ -52,7 +52,6 @@
   background: var(--color-scheme-1-foreground);
 }
 
-/* Галерея (Сітка) */
 .portfolio-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -127,6 +126,20 @@
   border-bottom-color: var(--color-curious-blue-light);
   border-radius: 50%;
   animation: rotation 1s linear infinite;
+}
+
+/* Клас для приховування від зрячих, але видимий для скрінрідерів */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 @keyframes rotation {
