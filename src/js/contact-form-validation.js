@@ -71,7 +71,7 @@ export const validateMessage = (input) => {
   }
 
   if (value.length > 256) {
-    showError(label, 'Name must not exceed 256 characters');
+    showError(label, 'Message must not exceed 256 characters');
     return false;
   }
 

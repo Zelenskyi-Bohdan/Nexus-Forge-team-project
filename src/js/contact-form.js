@@ -1,12 +1,13 @@
 import IMask from 'imask';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
 import { createOrder } from './api.js';
 import { validateMessage, validateName, validatePhoneNumber } from './contact-form-validation.js';
 import { openModal } from './success-modal.js';
-import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
 import spriteUrl from '../img/sprite.svg';
 
-const showError = message => {
+const showError = (message) => {
   iziToast.show({
     titleColor: '#FFFFFF',
     message,
@@ -31,7 +32,7 @@ const showError = message => {
   });
 };
 
-const handleError = error => {
+const handleError = (error) => {
   const status = error?.response?.status;
   const message = error?.response?.data?.message;
 
@@ -60,7 +61,7 @@ const disableControls = (elements) => {
 
 const enableControls = (elements) => {
   toggleControls(elements, false);
-}
+};
 
 const init = () => {
   const contactsForm = document.querySelector('.contacts-form');
