@@ -59,6 +59,14 @@
   --swiper-pagination-bullet-inactive-color: var(--color-scheme-1-text);
   --swiper-pagination-bullet-size: 8px;
   --swiper-pagination-bullet-horizontal-gap: 8px;
+
+  /* Hero gradient */
+
+  --linear-gradient: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.08) 0%,
+    rgba(0, 0, 0, 0.66) 100%
+  );
 }
 
 html {
