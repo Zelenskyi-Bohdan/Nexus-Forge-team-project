@@ -22,7 +22,7 @@
             href="mailto:info@mariakovalenko.com"
             class="contacts-content-link"
           >
-            <svg class="contacts-icon">
+            <svg class="contacts-icon" aria-hidden="true">
               <use href="./img/sprite.svg#icon-mail"></use>
             </svg>
             <span class="contacts-text">info@mariakovalenko.com</span>
@@ -30,7 +30,7 @@
         </li>
         <li>
           <a href="tel:+405551234567" class="contacts-content-link">
-            <svg class="contacts-icon">
+            <svg class="contacts-icon" aria-hidden="true">
               <use href="./img/sprite.svg#icon-call"></use>
             </svg>
             <span class="contacts-text">+40 (555) 123-4567</span>
@@ -43,7 +43,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <svg class="contacts-icon">
+            <svg class="contacts-icon" aria-hidden="true">
               <use href="./img/sprite.svg#icon-location-on"></use>
             </svg>
             <p class="contacts-text">
@@ -53,7 +53,7 @@
         </li>
       </ul>
     </div>
-    <form class="contacts-form">
+    <form class="contacts-form" autocomplete="on">
       <label class="contacts-form-label">
         <span class="required">Name</span>
         <input
@@ -61,6 +61,7 @@
           name="name"
           placeholder="Maria"
           class="contacts-form-input"
+          autocomplete="name"
         />
       </label>
       <label class="contacts-form-label">
@@ -70,6 +71,7 @@
           name="phone"
           placeholder="+10 (202) 111 2323"
           class="contacts-form-input"
+          autocomplete="tel"
         />
       </label>
       <label class="contacts-form-label">
