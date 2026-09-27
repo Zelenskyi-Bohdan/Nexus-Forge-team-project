@@ -7,11 +7,12 @@
   flex-direction: column;
   border-radius: 24px;
   padding: 32px 20px;
-  width: 335px;
-  height: 518px;
+  width: 100%;
+  max-width: 335px;
+  min-height: 518px;
 
   background-repeat: no-repeat;
-  background-size: 335px 518px;
+  background-size: cover;
   background-position: center;
 
   background-image: var(--linear-gradient), url(../img/feedbacks/hero-x1.webp);
@@ -22,8 +23,6 @@
   justify-content: space-between;
   flex-direction: column;
   gap: 32px;
-  width: 295px;
-  height: 454px;
 }
 
 .hero-text-container {
@@ -55,7 +54,7 @@
 
   border: none;
   border-radius: 6px;
-  width: 295px;
+  width: 100%;
   height: 44px;
 
   font-weight: 500;
@@ -78,7 +77,7 @@
   background-color: var(--color-curious-blue-light);
 }
 
-@media screen and (min-resolution: 192dpi) {
+@media (min-resolution: 192dpi) {
   .hero-container {
     background-image:
       var(--linear-gradient), url(../img/feedbacks/hero-x2.webp);
@@ -92,8 +91,9 @@
 
   .hero-container {
     padding: 32px;
-    width: 704px;
-    height: 431px;
+    width: 100%;
+    max-width: 704px;
+    min-height: 431px;
 
     background-size: 704px 431px;
 
@@ -103,8 +103,8 @@
 
   .hero-content-container {
     margin-top: auto;
-    width: 640px;
-    height: 277px;
+    width: 100%;
+    height: auto;
   }
 
   .hero-text-container {
@@ -114,7 +114,8 @@
   }
 
   .hero-title {
-    width: 519px;
+    max-width: 519px;
+    width: 100%;
   }
 
   .hero-btn {
@@ -136,7 +137,7 @@
     background-color: var(--color-curious-blue-light);
   }
 
-  @media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  @media (min-width: 768px) and (min-resolution: 192dpi) {
     .hero-container {
       background-image:
         var(--linear-gradient), url(../img/feedbacks/hero_t-x2.webp);
@@ -151,8 +152,9 @@
 
   .hero-container {
     padding: 32px 64px;
-    width: 1312px;
-    height: 702px;
+    width: 100%;
+    max-width: 1312px;
+    min-height: 702px;
 
     background-size: 1312px 702px;
 
@@ -163,8 +165,7 @@
   .hero-content-container {
     flex-direction: row;
     gap: 32px;
-    width: 1184px;
-    height: 212px;
+    max-width: 1312px;
   }
 
   .hero-text-container {
@@ -184,7 +185,7 @@
     margin-top: auto;
   }
 
-  @media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
+  @media (min-width: 1440px) and (min-resolution: 192dpi) {
     .hero-container {
       background-image:
         var(--linear-gradient), url(../img/feedbacks/hero_d-x2.webp);
