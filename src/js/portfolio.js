@@ -1,3 +1,6 @@
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
 import { fetchCategories, fetchPhotos } from './api.js';
 
 const refs = {
@@ -70,6 +73,12 @@ async function loadAndRenderPhotos() {
     }
   } catch (error) {
     console.error('Помилка завантаження фотографій:', error);
+
+    iziToast.error({
+    title: 'Error',
+    message: 'Failed to load photos. Please try again later',
+    position: 'topRight',
+  });
   } finally {
     hideLoader();
   }

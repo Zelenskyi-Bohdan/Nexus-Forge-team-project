@@ -1,5 +1,8 @@
 'use strict'
 
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
 import { getFeedbacks } from './api.js';
 
 const feedbacksList = document.querySelector('.feedbacks-list');
@@ -22,8 +25,14 @@ export async function renderFeedbacks() {
         </li>
       `
     )
-    .join('');;
+    .join('');
   } catch (error) {
     console.error('Failed to fetch feedbacks:', error);
+
+     iziToast.error({
+    title: 'Error',
+    message: 'Failed to load feedbacks. Please try again later.',
+    position: 'topRight',
+  });
   }
 }
