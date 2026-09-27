@@ -172,6 +172,10 @@
     justify-content: flex-start;
   }
 
+  .section-title.contacts {
+    align-items: flex-start;
+  }
+
   .contacts .section-header,
   .contacts .section-description {
     text-align: left;
@@ -183,6 +187,11 @@
 }
 
 @media (min-width: 1440px) {
+  .section-title.contacts {
+    align-items: flex-start;
+    width: 644px;
+  }
+
   .contacts .container {
     display: flex;
     gap: 24px;
