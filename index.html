@@ -21,7 +21,7 @@
     <script type="module" crossorigin src="/Nexus-Forge-team-project/index.js"></script>
     <link rel="modulepreload" crossorigin href="/Nexus-Forge-team-project/assets/vendor-g30EhaT8.js">
     <link rel="stylesheet" crossorigin href="/Nexus-Forge-team-project/assets/vendor-CsAmYNuR.css">
-    <link rel="stylesheet" crossorigin href="/Nexus-Forge-team-project/assets/index-CNt7nePT.css">
+    <link rel="stylesheet" crossorigin href="/Nexus-Forge-team-project/assets/index-zGBSzvOb.css">
   </head>
   <body>
     <header class="header">
@@ -63,23 +63,19 @@
 </header>
 
     <main>
-      <section class="hero-section" id="hero">
-  <div class="container">
-    <div class="hero-container">
-      <div class="hero-content-container">
-        <div class="hero-text-container">
-          <h1 class="hero-title">
+      <section class="section-hero" id="hero" aria-labelledby="page-header">
+  <div class="hero-container container">
+        <div class="hero-text-wrp">
+          <h1 class="page-header" id="page-header">
             Capture Your Love Story with Timeless Photography
           </h1>
-          <p class="hero-text">
+          <p class="section-description hero-description">
             At Maria Kovalenko Photography, we specialize in capturing the
             genuine emotions of your special day. Let us turn your unforgettable
             moments into stunning memories that last a lifetime.
           </p>
         </div>
         <a href="#contacts" class="hero-btn">Book a session</a>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -286,16 +282,12 @@
       </li>
     </ul>
 
-    <div
-      class="portfolio-loader is-hidden"
-      id="portfolio-loader"
-      aria-live="polite"
-    >
+    <ul class="portfolio-list list" aria-live="polite"></ul>
+
+    <div class="portfolio-loader is-hidden" id="portfolio-loader" aria-live="polite">
       <span class="spinner" aria-hidden="true"></span>
       <span class="visually-hidden">Loading images...</span>
     </div>
-
-    <ul class="portfolio-list list" aria-live="polite"></ul>
 
     <div class="portfolio-pagination">
       <button class="show-more-btn is-hidden" type="button" id="show-more-btn">
