@@ -46,7 +46,7 @@ function initSwiper() {
 }
 
 const feedbacksList = document.querySelector('.feedbacks-list');
-const loader = document.querySelector('#portfolio-loader');
+const loader = document.querySelector('#feedbacks-loader');
 
 async function renderFeedbacks() {
   loader.classList.remove('is-hidden');

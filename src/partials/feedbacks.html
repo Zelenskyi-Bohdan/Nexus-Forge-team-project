@@ -11,7 +11,14 @@
       </p>
     </div>
 
-    <load src="/partials/loader.html" />
+    <div
+      class="portfolio-loader is-hidden"
+      id="feedbacks-loader"
+      aria-live="polite"
+    >
+      <span class="spinner" aria-hidden="true"></span>
+      <span class="visually-hidden">Loading images...</span>
+    </div>
 
     <div class="feedbacks-content-container">
       <div class="feedbacks-swiper swiper">
