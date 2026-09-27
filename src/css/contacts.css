@@ -33,7 +33,9 @@
   fill: var(--color-scheme-1-text);
   background-color: var(--opacity-transparent);
   border-radius: 6px;
-  transition: background-color var(--transition), color var(--transition);
+  transition:
+    background-color var(--transition),
+    color var(--transition);
 }
 
 .contacts-text {
@@ -43,7 +45,9 @@
   padding: 0 6px;
   background-color: var(--opacity-transparent);
   border-radius: 6px;
-  transition: background-color var(--transition), color var(--transition);
+  transition:
+    background-color var(--transition),
+    color var(--transition);
 }
 
 .contacts-content-link:hover,
@@ -221,20 +225,28 @@
 
 @keyframes l5 {
   0% {
-    box-shadow: 20px 0 #000, -20px 0 #0002;
-    background: #000
+    box-shadow:
+      20px 0 #000,
+      -20px 0 #0002;
+    background: #000;
   }
   33% {
-    box-shadow: 20px 0 #000, -20px 0 #0002;
-    background: #0002
+    box-shadow:
+      20px 0 #000,
+      -20px 0 #0002;
+    background: #0002;
   }
   66% {
-    box-shadow: 20px 0 #0002, -20px 0 #000;
-    background: #0002
+    box-shadow:
+      20px 0 #0002,
+      -20px 0 #000;
+    background: #0002;
   }
   100% {
-    box-shadow: 20px 0 #0002, -20px 0 #000;
-    background: #000
+    box-shadow:
+      20px 0 #0002,
+      -20px 0 #000;
+    background: #000;
   }
 }
 

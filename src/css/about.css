@@ -20,7 +20,6 @@
   object-fit: contain;
 }
 
-
 @media (min-width: 1440px) {
   .about-description {
     width: 779px;
