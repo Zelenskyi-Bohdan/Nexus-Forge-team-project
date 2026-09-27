@@ -13,7 +13,7 @@ export async function getFeedbacks(limit = 10, page = 1) {
   });
 
   return response.data;
-} 
+}
 
 
 // ------------------------------------------------------------------------------------------------
@@ -35,4 +35,9 @@ export async function fetchPhotos(categoryId, page = 1, limit = 9) {
   const response = await fetch(url);
   if (!response.ok) throw new Error(`Помилка HTTP: ${response.status}`);
   return await response.json();
+}
+
+export async function createOrder(payload) {
+  const response = await axios.post('/orders', payload);
+  return response.data;
 }

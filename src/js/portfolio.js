@@ -30,8 +30,15 @@ async function onCategoryClick(event) {
   const selectedCategory = btn.dataset.category;
   if (selectedCategory === currentCategory) return;
 
-  document.querySelector('.filter-btn.active')?.classList.remove('active');
+  const activeBtn = document.querySelector('.filter-btn.active');
+  if (activeBtn) {
+    activeBtn.classList.remove('active');
+    activeBtn.setAttribute('aria-pressed', 'false');
+  }
+
   btn.classList.add('active');
+  btn.setAttribute('aria-pressed', 'true');
+
   currentCategory = selectedCategory;
   currentPage = 1;
   currentLimit = 9;
@@ -73,7 +80,7 @@ function renderCategoryButtons(categories) {
     .map(({ _id, category }) => {
       return `
       <li class="filter-item">        
-        <button class="filter-btn" type="button" data-category="${_id}">
+        <button class="filter-btn" type="button" data-category="${_id}" aria-pressed="false">
           ${category}
         </button>
       </li>
