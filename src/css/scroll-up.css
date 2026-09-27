@@ -1,0 +1,38 @@
+.scroll-up {
+  position: fixed;
+  z-index: 999;
+  right: 24px;
+  bottom: 24px;
+  rotate: -90deg;
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--color-curious-blue);
+  border: 2px solid var(--color-curious-blue);
+  border-radius: 25%;
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity var(--transition-menu),
+    visibility var(--transition-menu),
+    background-color var(--transition-menu);
+}
+
+.scroll-up.is-shown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.scroll-up:hover,
+.scroll-up:focus {
+  background-color: var(--color-curious-blue-lighter);
+}
