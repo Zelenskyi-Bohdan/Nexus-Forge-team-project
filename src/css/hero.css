@@ -64,6 +64,20 @@
   background-color: var(--color-white);
 }
 
+.hero-btn:hover,
+.hero-btn:focus {
+  border: 2px solid var(--color-white);
+  background-color: var(--color-curious-blue);
+}
+
+.hero-btn:active {
+  border-color: var(--color-white);
+  box-shadow:
+    inset 0 2px 4px -2px rgba(0, 0, 0, 0.06),
+    inset 0 4px 8px -2px var(--color-white);
+  background-color: var(--color-curious-blue-light);
+}
+
 @media screen and (min-resolution: 192dpi) {
   .hero-container {
     background-image:
@@ -107,6 +121,19 @@
     width: 159px;
     color: var(--color-scheme-1-text);
     background-color: var(--color-curious-blue);
+  }
+
+  .hero-btn:hover,
+  .hero-btn:focus {
+    border: 2px solid var(--color-curious-blue);
+    background-color: var(--color-white);
+  }
+
+  .hero-btn:active {
+    box-shadow:
+      inset 0 2px 4px -2px rgba(0, 0, 0, 0.06),
+      inset 0 4px 8px -2px var(--opacity-neutral-darkest-10);
+    background-color: var(--color-curious-blue-light);
   }
 
   @media screen and (min-width: 768px) and (min-resolution: 192dpi) {
