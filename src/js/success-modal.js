@@ -8,6 +8,12 @@ const handleEscape = (event) => {
   }
 };
 
+const handleBackdropClick = event => {
+  if (event.target === modal) {
+    closeModal();
+  }
+};
+
 const closeModal = () => {
   modal.classList.add('is-hidden');
   document.body.style.overflow = '';
@@ -17,6 +23,7 @@ const closeModal = () => {
   });
 
   document.removeEventListener('keydown', handleEscape);
+  modal.removeEventListener('click', handleBackdropClick);
 };
 
 export const openModal = orderNum => {
@@ -30,5 +37,6 @@ export const openModal = orderNum => {
     button.addEventListener('click', closeModal);
   });
 
+  modal.addEventListener('click', handleBackdropClick);
   document.addEventListener('keydown', handleEscape);
 };
