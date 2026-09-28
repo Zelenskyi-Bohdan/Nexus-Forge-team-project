@@ -15,14 +15,22 @@ let currentCategory = 'all';
 let currentLimit = 9;
 
 async function initPortfolio() {
-  const categories = await fetchCategories();
-  if (categories && categories.length > 0) {
-    renderCategoryButtons(categories);
+  try {
+    const categories = await fetchCategories();
+    if (categories && categories.length > 0) {
+      renderCategoryButtons(categories);
+    }
+  } catch (error) {
+    console.error('Помилка завантаження категорій:', error);
+    refs.filtersList.classList.add('is-hidden');
+    iziToast.error({
+      title: 'Error',
+      message: 'Failed to load categories. Please try again later.',
+      position: 'topRight',
+    });
   }
-
   refs.filtersList.addEventListener('click', onCategoryClick);
   refs.showMoreBtn.addEventListener('click', onShowMoreClick);
-
   await loadAndRenderPhotos();
 }
 
@@ -75,10 +83,10 @@ async function loadAndRenderPhotos() {
     console.error('Помилка завантаження фотографій:', error);
 
     iziToast.error({
-    title: 'Error',
-    message: 'Failed to load photos. Please try again later',
-    position: 'topRight',
-  });
+      title: 'Error',
+      message: 'Failed to load photos. Please try again later',
+      position: 'topRight',
+    });
   } finally {
     hideLoader();
   }
